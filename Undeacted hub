@@ -1,0 +1,9 @@
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+player.CharacterAdded:Connect(function(char)
+    local humanoid = char:WaitForChild("Humanoid")
+    
+    humanoid.WalkSpeed = 50
+    humanoid.JumpPower = 80
+end)
